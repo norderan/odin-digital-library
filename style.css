@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+#header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: antiquewhite;
+}
+
+#books-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 275px);
+    grid-template-rows: repeat(auto-fill, 275px);
+    gap: 20px;
+    padding: 20px;
+}
+.book-card {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: brown;
+    
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.book-card * {
+    margin: 5px;
+}
+
+.book-card > div > button{
+    border-radius: 20px;
+    height: 40px;
+    width: 70px;
+}
+#add-books {
+    height: 275px;
+}
