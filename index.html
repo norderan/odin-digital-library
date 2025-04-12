@@ -44,6 +44,40 @@
         </div>
         <button id="add-books"> + </button>
     </div>
+    <div id="form">
+        <form action="">
+            <h1>Add a book</h1>
+            <div>
+                <label for="name"><b>Book name: </b></label>
+                <input type="text" name="name" required>
+            </div>
+
+            <div>
+                <label for="author"><b>Book author: </b></label>
+                <input type="text" name="author" required>
+            </div>
+
+            <div>
+                <label for="genre"><b>Book genre: </b></label>
+                <input type="text" name="genre" required>
+            </div>
+
+            <div>
+                <label for="pages"><b>Number of books pages: </b></label>
+                <input type="text" name="pages" required>
+            </div>
+
+            <div>
+                <label class="switch">Book was read: </label>
+                <input type="checkbox"> 
+            </div>
+
+            <div id="buttons-in-form">
+                <button type="submit">subit</button>
+                <button type="button"onclick="closeForm()">Close</button>
+            </div>
+        </form>
+    </div>
 </body>
 <script src="js.js"></script>
 
