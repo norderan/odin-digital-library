@@ -1,9 +1,24 @@
 :root {
-    --main-color: #fbeee0;
-    --accent-color: #fbe0ee;
-    --dark-accent-color: #422800;
-}
+    --main-color: #fde2e4;        /* light pink */
+    --accent-color: #cddafd;      /* soft periwinkle */
+    --dark-accent-color: #5e548e; /* muted purple */
+    --alert-color: #ffadad;       /* pastel red */
+    --alert-accent-color: #ffd6a5;/* pastel orange */
+    --bg-color: #f0f4ef;          /* soft gray-green */
+  }
 
+.dark-theme {
+--main-color: #3d3d3d;          /* dark grey with a hint of warmth */
+--accent-color: #bb8eff;        /* bright periwinkle for contrast */
+--dark-accent-color:#060712 ;   /* slightly muted but still bright purple */
+--alert-color: #ff6464;         /* soft, pastel red with more pop */
+--alert-accent-color: #ffb88c;  /* light orange, pastel but visible */
+--bg-color: #212121;            /* very dark gray for background */
+}
+  
+body {
+    background-color: var(--bg-color);
+}
 @font-face {
     font-family: 'Nexa';
     src: url('fonts/Nexa-Heavy.ttf') format('truetype');
@@ -16,13 +31,19 @@
     font-weight: 300;
 }
 h1, h2{
+    color: var(--dark-accent-color);
     font-family: 'Nexa', 'Courier New';
     font-weight: 400;
+    font-size: 1.2rem;
 }
 
 h3, p, button, label {
+    color: var(--dark-accent-color);
+
     font-family: 'Nexa', 'Courier New';
     font-weight: 300;
+    font-size: 1rem;
+
 }
 * {
     margin: 0;
@@ -35,13 +56,14 @@ h3, p, button, label {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: antiquewhite;
+    background-color: var(--main-color);
 }
 
 #books-container{
     display: grid;
-    grid-template-columns: repeat(auto-fill, 275px);
-    grid-template-rows: repeat(auto-fill, 275px);
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-rows: repeat(auto, 300px);
+
     gap: 20px;
     padding: 20px;
 }
@@ -51,13 +73,10 @@ h3, p, button, label {
     border: 2px solid var(--dark-accent-color);
     border-radius: 30px;
     box-shadow: var(--dark-accent-color) 4px 4px 0 0;
-
-
     display: inline-flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
-
     padding: 20px;
     border-radius: 20px;
 }
@@ -69,6 +88,12 @@ h3, p, button, label {
 .book-card > div > button{
     border-radius: 20px;
     height: 40px;
+}
+
+#add-books {
+    height: 300px;
+    font-weight: 300;
+    font-size: 8rem;
 }
 
 
@@ -142,3 +167,9 @@ dialog> form > div:has(label) {
     margin-left: 10px;
 }
 
+.remove {
+    background-color: var(--alert-color);
+}
+.remove:hover {
+    background-color: var(--alert-accent-color);
+}
