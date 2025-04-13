@@ -69,11 +69,9 @@ h3, p, button, label {
 .book-card > div > button{
     border-radius: 20px;
     height: 40px;
-    width: 70px;
 }
 
 
-/* CSS */
 button {
   background-color: var(--main-color);
   border: 2px solid var(--dark-accent-color);
@@ -82,7 +80,7 @@ button {
   color: var(--dark-accent-color);
   cursor: pointer;
   display: inline-block;
-  font-weight: 600;
+  font-weight: 700;
   padding: 0 18px;
   text-align: center;
   text-decoration: none;
@@ -101,7 +99,7 @@ button:active {
 }
 
 
-#form {
+dialog {
     padding: 30px;
     background-color: var(--accent-color);
     border: var(--dark-accent-color) solid 3px;
@@ -112,17 +110,17 @@ button:active {
     border-radius: 20px;
 }
 
-#form > form {
+dialog > form {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-#form > form > h1 {
+dialog > form > h1 {
     align-self: center;
 }
 
-#form input {
+dialog input {
     flex: 1;
     margin-left: 10px;
     border-radius: 10px;
@@ -131,7 +129,7 @@ button:active {
 
 
 
-#form > form > div:has(label) {
+dialog> form > div:has(label) {
     display: flex;
 }
 
@@ -141,4 +139,6 @@ button:active {
 
 #buttons-in-form > button {
     height: 40px;
+    margin-left: 10px;
 }
+
